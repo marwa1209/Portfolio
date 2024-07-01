@@ -40,14 +40,6 @@ export default defineType({
       name: "demoLink",
       type: "string",
       title: "Demo Link",
-      validation: (Rule) =>
-        Rule.regex(
-          /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/,
-          {
-            name: "URL",
-            invert: false,
-          }
-        ).error("Invalid URL. Please provide a valid URL."),
     }),
     defineField({
       name: "githubLink",
